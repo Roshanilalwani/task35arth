@@ -1,0 +1,18 @@
+import cv2
+import numpy
+image = numpy.zeros ((800,1200,3))
+circle_image = cv2.circle(image,(150,150),80,(0,255,255),-2)
+RED = (0, 0, 255)
+p0 = (520, 550)
+p1 = ( 350, 250)
+p2 = ( 450, 400)
+cv2.putText(image,'Fun', p1, font, 4, RED, 2, cv2.LINE_AA)
+cv2.putText(image,'With', p2, font, 4, RED, 2, cv2.LINE_AA)
+cv2.putText(image,'OpenCV', p0, font, 4, RED, 2, cv2.LINE_AA)
+cv2.rectangle(image,(1060,250),(1120,550),(0,0,255),-1)
+pts=numpy.array([[1020,300],[1090,100],[1170,300]])
+pts = pts.reshape((-1,1,2))
+cv2.fillPoly(image,[pts],(0,255,0))
+cv2.imshow("photo" , image)
+cv2.waitKey()
+cv2.destroyAllWindows()
