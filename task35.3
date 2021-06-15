@@ -1,0 +1,28 @@
+import numpy
+import cv2
+night=cv2.imread("night.jpg")
+night.shape
+cv2.imshow("night",night)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+image1=night[ : 300, :500]
+cv2.imshow("night",image1)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+day=cv2.imread("day.jpg")
+day.shape
+cv2.imshow("morning",day)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+image2=day[ : 300, :500]
+cv2.imshow("morning",image2)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+vcollage=numpy.vstack((image1,image2))
+cv2.imshow("nature",vcollage)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+hcollage=numpy.hstack((image1,image2))
+cv2.imshow("nature",hcollage)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
