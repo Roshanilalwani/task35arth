@@ -1,0 +1,31 @@
+import numpy
+import cv2
+image1=cv2.imread("shizuka2005.jpg")
+cv2.imshow("shizuka",image1)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+image1.shape
+image2=cv2.imread("nobita12.jpg")
+cv2.imshow("nobita",image2)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+image2.shape
+crop_image1=image1[10:240,150:350]
+cv2.imshow("shizuka_crop_image",crop_image1)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+crop_image2=image2[90:320,150:350]
+cv2.imshow("nobita_crop_image",crop_image2)
+cv2.waitKey()
+cv2.destroyAllWindows()
+crop_image2=image2[90:320,150:350]
+image1[10:240,150:350]=crop_image2
+cv2.imshow("nobita*",image1)
+cv2.waitKey()
+cv2.destroyAllWindows()
+image1=cv2.imread("shizuka2005.jpg")
+crop_image1=image1[10:240,150:350]
+image2[90:320,150:350]=crop_image1
+cv2.imshow("pic",image2)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
